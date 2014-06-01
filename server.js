@@ -14,10 +14,10 @@ app.get('/:token/:room', function(req, res, next){
       auth_token: req.params.token,
       room_id: req.params.room,
       from: 'UptimeRobot',
-      message: util.format('"%s" (%s) is %s! (%s)', req.query.monitorFriendlyName, req.query.monitorURL, (req.query.alertType === 1 ? 'down' : 'up'), req.query.alertDetails),
+      message: util.format('"%s" (%s) is %s! (%s)', req.query.monitorFriendlyName, req.query.monitorURL, (parseInt(req.query.alertType) === 1 ? 'down' : 'up'), req.query.alertDetails),
       message_format: 'text',
-      notify: req.query.alertType === 1,
-      color: (req.query.alertType === 1) ? 'red' : 'green'
+      notify: parseInt(req.query.alertType) === 1,
+      color: (parseInt(req.query.alertType) === 1) ? 'red' : 'green'
     };
 
     request.post({ url:"https://api.hipchat.com/v1/rooms/message", qs:payload, json:true });

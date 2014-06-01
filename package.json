@@ -1,0 +1,28 @@
+{
+  "name": "uptimerobot-to-hipchat",
+  "version": "1.0.0",
+  "description": "A webhook service to post Uptime Robot alerts to a HipChat room.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@heroku.com:uptimerobot-to-hipchat.git"
+  },
+  "keywords": [
+    "uptime",
+    "uptimerobot",
+    "hipchat",
+    "alert",
+    "downtime",
+    "monitor"
+  ],
+  "author": "John Flesch <john@fles.ch>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.4.0",
+    "request": "^2.36.0"
+  }
+}

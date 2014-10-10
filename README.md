@@ -2,6 +2,8 @@
 
 A webhook service to post [Uptime Robot](https://uptimerobot.com/) alerts to a [HipChat](https://www.hipchat.com/) room.
 
+> Deprecation Notice: UptimeRobot now supports setting up HipChat as an Alert Contact (see the [announcment](http://blog.uptimerobot.com/hipchat-and-slack-integrations-yay/)), so this Heroku based service is no longer needed, and I can't guarantee its stability or future availability.
+
 **Important:** The web service is running on Heroku, and using it is somewhat insecure as you're exposing a HipChat API token and Room ID. It's recommended that you clone this repository and host it yourself.
 
 ![chat](https://cloud.githubusercontent.com/assets/13259/3140858/9bdcfa50-e945-11e3-90b4-86d68d9e5593.png)
